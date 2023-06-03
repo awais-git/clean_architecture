@@ -42,3 +42,7 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Ignoring the .env because it contains our api keys, which we do not want to make it public as it is sensetive data
+/assets/.env
+/lib/src/env/env.dart

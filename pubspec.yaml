@@ -13,6 +13,7 @@ dependencies:
 
   #For Routing
   auto_route: ^7.4.0
+  go_router : ^7.1.1
 
   #For Icons
   ionicons: ^0.2.2
@@ -35,12 +36,14 @@ dependencies:
   #others
   flutter_hooks: ^0.18.6
 
-  #For Showimg the toast message
-  oktoast: ^3.3.1
+
+  #for securing the api keys and other sensitive keys in the client side
+  envied: ^0.3.0
 
   
   flutter:
     sdk: flutter
+  
 
 
 dev_dependencies:
@@ -49,9 +52,10 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   build_runner: ^2.3.3
   lint: ^2.0.20
-  json_serializable: ^6.7.0
+  json_serializable: ^6.6.1
   floor_generator: ^1.4.2
   retrofit_generator: ^7.0.1
+  envied_generator: ^0.3.0
 
   
 
