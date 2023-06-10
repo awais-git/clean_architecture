@@ -1,5 +1,6 @@
 import 'dart:io' show HttpStatus;
 import 'package:dio/dio.dart';
+// ignore: depend_on_referenced_packages
 import 'package:meta/meta.dart';
 import 'package:retrofit/retrofit.dart';
 import '../../../util/resources/data_state.dart';
