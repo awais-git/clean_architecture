@@ -91,7 +91,7 @@ class ArticleWidget extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.only(top: 4),
                 child: Text(
-                  article.description,
+                 " article.description,",
                   maxLines: 2,
                 ),
               ),

@@ -5,7 +5,7 @@ import 'package:clean_artitecture/src/domain/models/articles_model.dart';
 
 class BreakingNewsResponse extends Equatable {
   final String status;
-  final String totalResults;
+  final int totalResults;
   final List<Articles> articles;
   const BreakingNewsResponse({
     required this.status,
@@ -15,7 +15,7 @@ class BreakingNewsResponse extends Equatable {
 
   BreakingNewsResponse copyWith({
     String? status,
-    String? totalResults,
+    int? totalResults,
     List<Articles>? articles,
   }) {
     return BreakingNewsResponse(
@@ -28,9 +28,9 @@ class BreakingNewsResponse extends Equatable {
   factory BreakingNewsResponse.fromMap(Map<String, dynamic> map) {
     return BreakingNewsResponse(
       status: map['status'] as String,
-      totalResults: map['totalResults'] as String,
+      totalResults: map['totalResults'],
       articles: List<Articles>.from(
-        (map['articles'] as List<int>).map<Articles>(
+        (map['articles'] as List<dynamic>).map<Articles>(
           (e) => Articles.fromMap(e as Map<String, dynamic>),
         ),
       ),

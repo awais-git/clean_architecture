@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-abstract class BaseCubit<S, T> extends Cubit {
+abstract class BaseCubit<S, T> extends Cubit<S> {
   BaseCubit(S initialState, this._data) : super(initialState);
   final T _data;
 

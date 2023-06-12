@@ -1,8 +1,11 @@
 part of 'remote_articles_cubit.dart';
 
 abstract class RemoteArticlesState extends Equatable {
-  const RemoteArticlesState(
-      {this.articles = const [], this.dioError, this.noMoreData = false});
+  const RemoteArticlesState({
+    this.articles = const [],
+    this.dioError,
+    this.noMoreData = true,
+  });
 
   final List<Articles> articles;
   final DioError? dioError;

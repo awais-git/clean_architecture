@@ -4,21 +4,21 @@ import 'dart:convert';
 import 'package:equatable/equatable.dart';
 
 class Articles extends Equatable {
-  final String author;
+  // final String author;
   final String title;
-  final String description;
+  // final String description;
   final String url;
   final String urlToImage;
   final String publishedAt;
-  final String content;
+  // final String content;
   const Articles({
-    required this.author,
+    // required this.author,
     required this.title,
-    required this.description,
+    // required this.description,
     required this.url,
     required this.urlToImage,
     required this.publishedAt,
-    required this.content,
+    // required this.content,
   });
 
   Articles copyWith({
@@ -31,37 +31,37 @@ class Articles extends Equatable {
     String? content,
   }) {
     return Articles(
-      author: author ?? this.author,
+      // author: author ?? this.author,
       title: title ?? this.title,
-      description: description ?? this.description,
+      // description: description ?? this.description,
       url: url ?? this.url,
       urlToImage: urlToImage ?? this.urlToImage,
       publishedAt: publishedAt ?? this.publishedAt,
-      content: content ?? this.content,
+      // content: content ?? this.content,
     );
   }
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
-      'author': author,
+      // 'author': author,
       'title': title,
-      'description': description,
+      // 'description': description,
       'url': url,
       'urlToImage': urlToImage,
       'publishedAt': publishedAt,
-      'content': content,
+      // 'content': content,
     };
   }
 
   factory Articles.fromMap(Map<String, dynamic> map) {
     return Articles(
-      author: map['author'] as String,
+      // author: map['author'] as String,
       title: map['title'] as String,
-      description: map['description'] as String,
+      // description: map['description'] as String,
       url: map['url'] as String,
       urlToImage: map['urlToImage'] as String,
       publishedAt: map['publishedAt'] as String,
-      content: map['content'] as String,
+      // content: map['content'] as String,
     );
   }
 
@@ -76,13 +76,13 @@ class Articles extends Equatable {
   @override
   List<Object> get props {
     return [
-      author,
+      // author,
       title,
-      description,
+      // description,
       url,
       urlToImage,
       publishedAt,
-      content,
+      // content,
     ];
   }
 }

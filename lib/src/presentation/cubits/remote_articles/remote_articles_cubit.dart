@@ -35,8 +35,10 @@ class RemoteArticlesCubit
         emit(
           RemoteArticlesSuccessState(articles: data, noMoreData: noMoreData),
         );
-      } else if (data is DataFailed) {
-        RemoteArticlesErrorState(dioError: response.error);
+      } else if (response is DataFailed) {
+        emit(
+          RemoteArticlesErrorState(dioError: response.error),
+        );
       }
     });
   }
