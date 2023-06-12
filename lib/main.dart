@@ -1,6 +1,6 @@
 import 'package:clean_artitecture/src/bloc_providers.dart';
-import 'package:clean_artitecture/src/config/themes/app_themes.dart';
 import 'package:clean_artitecture/src/config/routes/app_router.dart';
+import 'package:clean_artitecture/src/config/themes/app_themes.dart';
 import 'package:clean_artitecture/src/domain/repositories/api_repository.dart';
 import 'package:clean_artitecture/src/locator.dart';
 import 'package:clean_artitecture/src/presentation/cubits/remote_articles/remote_articles_cubit.dart';
@@ -20,7 +20,13 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: locator<BlocProviders>().blocProviders,
+      providers: [
+        BlocProvider(
+          create: (context) => RemoteArticlesCubit(
+            locator<BreakingNewsRepository>(),
+          )..getBreakingNewsArticles(),
+        ),
+      ],
       child: MaterialApp.router(
         theme: AppThemes.lightTheme,
         routerConfig: router,

@@ -9,13 +9,10 @@ import 'domain/repositories/api_repository.dart';
 final locator = GetIt.instance;
 
 Future<void> initializeDepedencies() async {
-
-
-    final dio = Dio();
+  final dio = Dio();
   dio.interceptors.add(AwesomeDioInterceptor());
 
-
-   locator.registerSingleton<Dio>(dio);
+  locator.registerSingleton<Dio>(dio);
   locator.registerSingleton<RestClient>(
     RestClient(locator<Dio>()),
   );
@@ -23,4 +20,6 @@ Future<void> initializeDepedencies() async {
   locator.registerSingleton<BreakingNewsRepository>(
     ApiRepositoryImpl(locator<RestClient>()),
   );
+
+  // locator.registerSingleton<BlocProviders>(BlocProviders());
 }
