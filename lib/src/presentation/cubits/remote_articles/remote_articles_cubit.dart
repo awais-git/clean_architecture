@@ -14,7 +14,7 @@ class RemoteArticlesCubit
   RemoteArticlesCubit(this._apiRespository)
       : super(const RemoteArticlesLoadingState(), []);
 
-  final ApiRespository _apiRespository;
+  final BreakingNewsRepository _apiRespository;
 
   int _page = 1;
 

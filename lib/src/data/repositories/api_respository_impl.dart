@@ -6,7 +6,7 @@ import 'package:clean_artitecture/src/domain/responses/breaking_news_response.da
 import '../datasources/remote/news_api_service.dart';
 import 'base/base_api_repository.dart';
 
-class ApiRepositoryImpl extends BaseApiRepository implements ApiRespository {
+class ApiRepositoryImpl extends BaseApiRepository implements BreakingNewsRepository {
   final RestClient _newsApiService;
 
   ApiRepositoryImpl(this._newsApiService);
